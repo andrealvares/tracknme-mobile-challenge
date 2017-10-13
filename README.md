@@ -35,7 +35,7 @@ O aplicativo deve permitir o uso offline. Nesse caso o usuário poderá visualiz
 ```
 MIT License
 
-Copyright (c) 2016 Stone Pagamentos
+Copyright (c) 2016 TrackNMe
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
