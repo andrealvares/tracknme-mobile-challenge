@@ -1,3 +1,6 @@
+![TrackNMe](https://www.tracknme.com.br/app/images/logo-tracknme.png)
+
+
 # Desafio Mobile
 
 O desafio consiste em criar um app com as seguintes características:
@@ -12,9 +15,9 @@ A nova posição deve ser salva localmente (usando o Realm) e sua aplicação de
 
 ``` json
 {
-    "dateTime": "2017-10-12T21:34:15",
-		"latitude": -23.962676666666667,
-		"longitude": -46.3884785
+    	"dateTime": "2017-10-12T21:34:15",
+	"latitude": -23.962676666666667,
+	"longitude": -46.3884785
 }
 ```
 Aconselhamos que use o [Apiary](https://apiary.io) como API nessa etapa.
