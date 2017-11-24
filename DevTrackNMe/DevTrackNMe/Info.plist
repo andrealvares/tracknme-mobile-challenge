@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>O app usa localização para determinar seu posicionamento geográfico</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>O app usa localização para determinar seu posicionamento geográfico</string>
 	<key>GoogleMapsAPIKey</key>
 	<string>AIzaSyD0uPcFa2C1upIc_Oh05TqXh_VjN9LLTc0</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -43,10 +47,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>googlechromes</string>
-        <string>comgooglemaps</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 </dict>
 </plist>
