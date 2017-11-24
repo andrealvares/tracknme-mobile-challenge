@@ -15,6 +15,7 @@
 		2B8948B41FC8868F0063E3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */; };
 		2B8948BF1FC886900063E3A3 /* DevTrackNMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948BE1FC886900063E3A3 /* DevTrackNMeTests.swift */; };
 		2B8948CA1FC886900063E3A3 /* DevTrackNMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */; };
+		2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */; };
 		3011FFD84E69B474E2DAC6D7 /* Pods_DevTrackNMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */; };
 		ADA25CAFF58BD2F8AE5DC1CA /* Pods_DevTrackNMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130A5C8071F1416C978F57FA /* Pods_DevTrackNMe.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		2B8948C51FC886900063E3A3 /* DevTrackNMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevTrackNMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTrackNMeUITests.swift; sourceTree = "<group>"; };
 		2B8948CB1FC886900063E3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TargetProperties.swift"; sourceTree = "<group>"; };
 		3F096A7A7A267C4AF2754CAA /* Pods-DevTrackNMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeTests/Pods-DevTrackNMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66C134303247673AE63A906B /* Pods-DevTrackNMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMe/Pods-DevTrackNMe.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevTrackNMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 		2B8948A81FC8868F0063E3A3 /* DevTrackNMe */ = {
 			isa = PBXGroup;
 			children = (
+				2B8948D71FC88A7E0063E3A3 /* Extensions */,
 				2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */,
 				2B8948AB1FC8868F0063E3A3 /* ViewController.swift */,
 				2B8948AD1FC8868F0063E3A3 /* Main.storyboard */,
@@ -153,6 +156,14 @@
 				2B8948CB1FC886900063E3A3 /* Info.plist */,
 			);
 			path = DevTrackNMeUITests;
+			sourceTree = "<group>";
+		};
+		2B8948D71FC88A7E0063E3A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		98728D4B99C772529049A784 /* Frameworks */ = {
@@ -465,6 +476,7 @@
 			files = (
 				2B8948AC1FC8868F0063E3A3 /* ViewController.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
+				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
