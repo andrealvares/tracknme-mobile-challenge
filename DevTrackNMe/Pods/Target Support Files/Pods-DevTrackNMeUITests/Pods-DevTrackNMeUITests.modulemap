@@ -1,0 +1,6 @@
+framework module Pods_DevTrackNMeUITests {
+  umbrella header "Pods-DevTrackNMeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
