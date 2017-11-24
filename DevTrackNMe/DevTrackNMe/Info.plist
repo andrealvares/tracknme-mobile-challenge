@@ -4,8 +4,6 @@
 <dict>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>O app usa localização para determinar seu posicionamento geográfico</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>O app usa localização para determinar seu posicionamento geográfico</string>
 	<key>GoogleMapsAPIKey</key>
 	<string>AIzaSyD0uPcFa2C1upIc_Oh05TqXh_VjN9LLTc0</string>
 	<key>CFBundleDevelopmentRegion</key>

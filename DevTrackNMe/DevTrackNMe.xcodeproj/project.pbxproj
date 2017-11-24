@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05A09A69B1A8BC8AE47C7BD7 /* Pods_DevTrackNMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A160AC2AB6F1C175DFD1D9EC /* Pods_DevTrackNMeTests.framework */; };
+		2B0F0D7C1FC8AAD400FF83A7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D7B1FC8AAD400FF83A7 /* AppCoordinator.swift */; };
+		2B0F0D7E1FC8AB4A00FF83A7 /* FirstRunKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D7D1FC8AB4A00FF83A7 /* FirstRunKeeper.swift */; };
+		2B0F0D801FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D7F1FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift */; };
+		2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */; };
+		2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */; };
+		2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */; };
+		2B4C77861FC8B928007B3809 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C77851FC8B928007B3809 /* RunViewController.swift */; };
 		2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */; };
 		2B8948AC1FC8868F0063E3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948AB1FC8868F0063E3A3 /* ViewController.swift */; };
 		2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948AD1FC8868F0063E3A3 /* Main.storyboard */; };
@@ -42,6 +49,13 @@
 		051B4C402E523929212E80B6 /* Pods-DevTrackNMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeUITests/Pods-DevTrackNMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		07A8C63C5F5AACB7940A00D6 /* Pods-DevTrackNMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeTests/Pods-DevTrackNMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		130A5C8071F1416C978F57FA /* Pods_DevTrackNMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevTrackNMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0F0D7B1FC8AAD400FF83A7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2B0F0D7D1FC8AB4A00FF83A7 /* FirstRunKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRunKeeper.swift; sourceTree = "<group>"; };
+		2B0F0D7F1FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstRunKeeper.swift"; sourceTree = "<group>"; };
+		2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCoordinator.swift; sourceTree = "<group>"; };
+		2B4C77851FC8B928007B3809 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		2B8948A61FC8868F0063E3A3 /* DevTrackNMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevTrackNMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8948AB1FC8868F0063E3A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +118,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2B0F0D781FC8A8D300FF83A7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F0D7D1FC8AB4A00FF83A7 /* FirstRunKeeper.swift */,
+				2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2B0F0D791FC8A8DA00FF83A7 /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		2B0F0D7A1FC8A8EA00FF83A7 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */,
+				2B8948AB1FC8868F0063E3A3 /* ViewController.swift */,
+				2B4C77851FC8B928007B3809 /* RunViewController.swift */,
+			);
+			path = Run;
+			sourceTree = "<group>";
+		};
+		2B0F0D831FC8B40400FF83A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		2B89489D1FC8868F0063E3A3 = {
 			isa = PBXGroup;
 			children = (
@@ -129,10 +177,14 @@
 		2B8948A81FC8868F0063E3A3 /* DevTrackNMe */ = {
 			isa = PBXGroup;
 			children = (
-				2B8948D71FC88A7E0063E3A3 /* Extensions */,
 				2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */,
-				2B8948AB1FC8868F0063E3A3 /* ViewController.swift */,
+				2B0F0D7B1FC8AAD400FF83A7 /* AppCoordinator.swift */,
 				2B8948AD1FC8868F0063E3A3 /* Main.storyboard */,
+				2B0F0D7A1FC8A8EA00FF83A7 /* Run */,
+				2B0F0D791FC8A8DA00FF83A7 /* History */,
+				2B0F0D781FC8A8D300FF83A7 /* Onboarding */,
+				2B0F0D831FC8B40400FF83A7 /* Protocols */,
+				2B8948D71FC88A7E0063E3A3 /* Extensions */,
 				2B8948B01FC8868F0063E3A3 /* Assets.xcassets */,
 				2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */,
 				2B8948B51FC8868F0063E3A3 /* Info.plist */,
@@ -162,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */,
+				2B0F0D7F1FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -474,9 +527,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0F0D7C1FC8AAD400FF83A7 /* AppCoordinator.swift in Sources */,
 				2B8948AC1FC8868F0063E3A3 /* ViewController.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
+				2B0F0D7E1FC8AB4A00FF83A7 /* FirstRunKeeper.swift in Sources */,
+				2B4C77861FC8B928007B3809 /* RunViewController.swift in Sources */,
+				2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */,
+				2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */,
 				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,
+				2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */,
+				2B0F0D801FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

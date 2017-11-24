@@ -51,7 +51,6 @@ class ViewController: UIViewController {
     
     func setupLocationManager(){
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
