@@ -8,6 +8,8 @@ target 'DevTrackNMe' do
   # Pods for DevTrackNMe
   pod 'RealmSwift'
   pod 'GoogleMaps'
+  pod 'SwiftyJSON'
+  pod 'Moya'
 
   target 'DevTrackNMeTests' do
     inherit! :search_paths
