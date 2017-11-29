@@ -15,8 +15,7 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="30dp"
         android:background="@color/colorAccent"
-        android:clickable="true"
-        android:visibility="gone">
+        android:clickable="true">
 
         <TextView
             android:layout_width="wrap_content"

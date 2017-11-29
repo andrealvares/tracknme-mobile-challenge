@@ -54,21 +54,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+
         seeHistoryButton = findViewById(R.id.see_history_button);
-        mapFragment.getMapAsync(this);
-
-        // Initialize Realm (just once per application)
-        Realm.init(this);
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-
-        backendManager.fetchPopularLocation(this);
 
         seeHistoryButton.setOnClickListener(new View.OnClickListener()
 
@@ -81,6 +68,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         });
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+        // Initialize Realm (just once per application)
+        Realm.init(this);
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        backendManager.fetchPopularLocation(this);
     }
 
     public void onSuccessFetchLocations(List<Locations> locationsList) {
@@ -163,7 +165,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 realm.commitTransaction();
             } finally {
                 realm.close();
-                seeHistoryButton.setVisibility(View.VISIBLE);
             }
 
             return null;
