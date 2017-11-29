@@ -36,11 +36,14 @@ public class MarkerAnimation {
             public void onAnimationEnd(Animator animation)
             {
                 if (position < locationList.size()-2) {
-                    activity.mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(finalPosition, 19));
+                    activity.mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(finalPosition, 16));
                     animateMarker(activity, marker, locationList, new LatLngInterpolator.Linear(), position + 1, showMessage);
                 }
                 else if (position == locationList.size()-2 && showMessage) {
                     activity.addMapClick();
+                }
+                else {
+                    activity.mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(finalPosition, 16));
                 }
             }
         });

@@ -88,7 +88,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onSuccessFetchLocations(List<Locations> locationsList) {
 
         LatLng temp = new LatLng(locationsList.get(0).getLatitude(), locationsList.get(0).getLongitude());
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(temp, 19));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(temp, 16));
 
         ArrayList<LatLng> locationList = new ArrayList<>();
 
