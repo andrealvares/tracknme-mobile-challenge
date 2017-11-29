@@ -127,9 +127,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if (globalMarker == null) { // First time adding marker to map
             globalMarker = mMap.addMarker(new MarkerOptions().position(locationList.get(0)));
-            MarkerAnimation.animateMarker(this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, 3000, true);
+            MarkerAnimation.animateMarker(this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, true);
         } else {
-            MarkerAnimation.animateMarker(this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, 3000, true);
+            MarkerAnimation.animateMarker(this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, true);
         }
     }
 
@@ -186,7 +186,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 ArrayList<LatLng> locationList = new ArrayList<>();
                 locationList.add(globalMarker.getPosition());
                 locationList.add(temp);
-                MarkerAnimation.animateMarker(MapsActivity.this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, 3000, false);
+                MarkerAnimation.animateMarker(MapsActivity.this, globalMarker, locationList, new LatLngInterpolator.Linear(), 0, false);
 
                 Locations location = new Locations();
                 location.setLatitude(point.latitude);

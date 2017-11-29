@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MarkerAnimation {
 
-    public static void animateMarker(final MapsActivity activity, final Marker marker, final ArrayList<LatLng> locationList, final LatLngInterpolator latLngInterpolator, final int position, final int duration, final boolean showMessage) {
+    public static void animateMarker(final MapsActivity activity, final Marker marker, final ArrayList<LatLng> locationList, final LatLngInterpolator latLngInterpolator, final int position, final boolean showMessage) {
         TypeEvaluator<LatLng> typeEvaluator = new TypeEvaluator<LatLng>() {
             @Override
             public LatLng evaluate(float fraction, LatLng startValue, LatLng endValue) {
@@ -29,7 +29,7 @@ public class MarkerAnimation {
 
         Property<Marker, LatLng> property = Property.of(Marker.class, LatLng.class, "position");
         ObjectAnimator animator = ObjectAnimator.ofObject(marker, property, typeEvaluator, finalPosition);
-        animator.setDuration(duration);
+        animator.setDuration(3000);
         animator.addListener(new AnimatorListenerAdapter()
         {
             @Override
@@ -37,7 +37,7 @@ public class MarkerAnimation {
             {
                 if (position < locationList.size()-2) {
                     activity.mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(finalPosition, 19));
-                    animateMarker(activity, marker, locationList, new LatLngInterpolator.Linear(), position + 1, 3, showMessage);
+                    animateMarker(activity, marker, locationList, new LatLngInterpolator.Linear(), position + 1, showMessage);
                 }
                 else if (position == locationList.size()-2 && showMessage) {
                     activity.addMapClick();
