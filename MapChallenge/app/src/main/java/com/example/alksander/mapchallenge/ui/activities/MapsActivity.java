@@ -163,6 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 realm.commitTransaction();
             } finally {
                 realm.close();
+                seeHistoryButton.setVisibility(View.VISIBLE);
             }
 
             return null;
