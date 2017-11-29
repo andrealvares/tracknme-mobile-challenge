@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MapChallenge</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_list">List</string>
+
+    <!--map activity strings-->
+    <string name="path_history_button">See Path History</string>
+
+    <!--list activity strings-->
+    <string name="back_to_map_button">Back to Map</string>
+    <string name="list_activity_header">Path History</string>
+
+
+</resources>
