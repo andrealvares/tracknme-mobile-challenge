@@ -22,7 +22,7 @@ class RunCoordinator: CoordinatorType {
     
     func start() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RunViewController")
         
         navigationController.navigationBar.isHidden = false
         navigationController.setViewControllers([viewController], animated: true)

@@ -14,11 +14,11 @@
 		2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */; };
 		2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */; };
 		2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */; };
-		2B4C77861FC8B928007B3809 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C77851FC8B928007B3809 /* RunViewController.swift */; };
 		2B6166F91FCACA510057DF25 /* Bundle+LoadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */; };
 		2B6166FD1FCACBDB0057DF25 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */; };
+		2B6166FF1FCD77480057DF25 /* RunViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */; };
 		2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */; };
-		2B8948AC1FC8868F0063E3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948AB1FC8868F0063E3A3 /* ViewController.swift */; };
+		2B8948AC1FC8868F0063E3A3 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */; };
 		2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948AD1FC8868F0063E3A3 /* Main.storyboard */; };
 		2B8948B11FC8868F0063E3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948B01FC8868F0063E3A3 /* Assets.xcassets */; };
 		2B8948B41FC8868F0063E3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */; };
@@ -57,13 +57,13 @@
 		2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCoordinator.swift; sourceTree = "<group>"; };
-		2B4C77851FC8B928007B3809 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		2B6166F71FCACA040057DF25 /* posicoes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = posicoes.json; path = ../../assets/posicoes.json; sourceTree = "<group>"; };
 		2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadResource.swift"; sourceTree = "<group>"; };
 		2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewModelType.swift; sourceTree = "<group>"; };
 		2B8948A61FC8868F0063E3A3 /* DevTrackNMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevTrackNMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B8948AB1FC8868F0063E3A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		2B8948AE1FC8868F0063E3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B8948B01FC8868F0063E3A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B8948B31FC8868F0063E3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */,
-				2B8948AB1FC8868F0063E3A3 /* ViewController.swift */,
-				2B4C77851FC8B928007B3809 /* RunViewController.swift */,
+				2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */,
 				2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */,
+				2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */,
 			);
 			path = Run;
 			sourceTree = "<group>";
@@ -544,14 +544,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0F0D7C1FC8AAD400FF83A7 /* AppCoordinator.swift in Sources */,
-				2B8948AC1FC8868F0063E3A3 /* ViewController.swift in Sources */,
+				2B8948AC1FC8868F0063E3A3 /* RunViewController.swift in Sources */,
 				2B6166F91FCACA510057DF25 /* Bundle+LoadResource.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
 				2B0F0D7E1FC8AB4A00FF83A7 /* FirstRunKeeper.swift in Sources */,
-				2B4C77861FC8B928007B3809 /* RunViewController.swift in Sources */,
 				2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */,
 				2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */,
 				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,
+				2B6166FF1FCD77480057DF25 /* RunViewModelType.swift in Sources */,
 				2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */,
 				2B0F0D801FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift in Sources */,
 				2B6166FD1FCACBDB0057DF25 /* Coordinate.swift in Sources */,
