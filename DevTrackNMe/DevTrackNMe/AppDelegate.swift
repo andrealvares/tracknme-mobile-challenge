@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                         firstRunKeeper: UserDefaults.standard)
         appCoordinator?.start()
         
+        print(RunService.getFirstCoordinates())
+        
         return true
     }
 

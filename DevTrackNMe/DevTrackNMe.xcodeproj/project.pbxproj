@@ -25,6 +25,8 @@
 		2B8948BF1FC886900063E3A3 /* DevTrackNMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948BE1FC886900063E3A3 /* DevTrackNMeTests.swift */; };
 		2B8948CA1FC886900063E3A3 /* DevTrackNMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */; };
 		2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */; };
+		2BE829C41FD025E100CBEA29 /* SwiftyJSON+DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */; };
+		2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B6166F71FCACA040057DF25 /* posicoes.json */; };
 		3011FFD84E69B474E2DAC6D7 /* Pods_DevTrackNMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */; };
 		ADA25CAFF58BD2F8AE5DC1CA /* Pods_DevTrackNMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130A5C8071F1416C978F57FA /* Pods_DevTrackNMe.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,7 @@
 		2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCoordinator.swift; sourceTree = "<group>"; };
-		2B6166F71FCACA040057DF25 /* posicoes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = posicoes.json; path = ../../assets/posicoes.json; sourceTree = "<group>"; };
+		2B6166F71FCACA040057DF25 /* posicoes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posicoes.json; sourceTree = "<group>"; };
 		2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadResource.swift"; sourceTree = "<group>"; };
 		2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewModelType.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTrackNMeUITests.swift; sourceTree = "<group>"; };
 		2B8948CB1FC886900063E3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TargetProperties.swift"; sourceTree = "<group>"; };
+		2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftyJSON+DateValue.swift"; sourceTree = "<group>"; };
 		3F096A7A7A267C4AF2754CAA /* Pods-DevTrackNMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeTests/Pods-DevTrackNMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66C134303247673AE63A906B /* Pods-DevTrackNMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMe/Pods-DevTrackNMe.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevTrackNMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,15 +189,13 @@
 				2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */,
 				2B0F0D7B1FC8AAD400FF83A7 /* AppCoordinator.swift */,
 				2B8948AD1FC8868F0063E3A3 /* Main.storyboard */,
+				2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */,
 				2B0F0D7A1FC8A8EA00FF83A7 /* Run */,
 				2B6166FB1FCACBC00057DF25 /* History */,
 				2B0F0D781FC8A8D300FF83A7 /* Onboarding */,
 				2B0F0D831FC8B40400FF83A7 /* Protocols */,
 				2B8948D71FC88A7E0063E3A3 /* Extensions */,
-				2B8948B01FC8868F0063E3A3 /* Assets.xcassets */,
-				2B6166F71FCACA040057DF25 /* posicoes.json */,
-				2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */,
-				2B8948B51FC8868F0063E3A3 /* Info.plist */,
+				2BE829C21FD023B700CBEA29 /* Resources */,
 			);
 			path = DevTrackNMe;
 			sourceTree = "<group>";
@@ -223,8 +224,19 @@
 				2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */,
 				2B0F0D7F1FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift */,
 				2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */,
+				2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BE829C21FD023B700CBEA29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B8948B01FC8868F0063E3A3 /* Assets.xcassets */,
+				2B6166F71FCACA040057DF25 /* posicoes.json */,
+				2B8948B51FC8868F0063E3A3 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		98728D4B99C772529049A784 /* Frameworks */ = {
@@ -353,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */,
 				2B8948B41FC8868F0063E3A3 /* LaunchScreen.storyboard in Resources */,
 				2B8948B11FC8868F0063E3A3 /* Assets.xcassets in Resources */,
 				2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */,
@@ -544,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0F0D7C1FC8AAD400FF83A7 /* AppCoordinator.swift in Sources */,
+				2BE829C41FD025E100CBEA29 /* SwiftyJSON+DateValue.swift in Sources */,
 				2B8948AC1FC8868F0063E3A3 /* RunViewController.swift in Sources */,
 				2B6166F91FCACA510057DF25 /* Bundle+LoadResource.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
@@ -723,7 +737,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 443UTBWTXG;
-				INFOPLIST_FILE = DevTrackNMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DevTrackNMe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.thalesfrigo.DevTrackNMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -739,7 +753,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 443UTBWTXG;
-				INFOPLIST_FILE = DevTrackNMe/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DevTrackNMe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.thalesfrigo.DevTrackNMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";

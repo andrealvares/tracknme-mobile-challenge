@@ -12,3 +12,14 @@ protocol RunViewModelType {
     func didGetFirstLocation()
     func didAddNewLocation()
 }
+
+struct FirstRunViewModel: RunViewModelType {
+    
+    func didGetFirstLocation() {
+        
+    }
+    
+    func didAddNewLocation() {
+        
+    }
+}
