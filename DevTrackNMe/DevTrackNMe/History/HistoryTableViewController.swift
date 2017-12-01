@@ -102,6 +102,9 @@ class HistoryTableViewController: UITableViewController {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             guard error == nil, cell.currentIndex == indexPath.row else {
+                cell.detailTextLabel?.text = "LAT: \(coordinate?.latitude ?? 0) - LONG: \(coordinate?.longitude ?? 0)"
+                cell.textLabel?.text = HistoryTableViewController.dateFormatter.string(from: coordinate?.date ?? Date())
+                
                 return
             }
 
