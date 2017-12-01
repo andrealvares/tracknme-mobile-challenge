@@ -8,8 +8,18 @@
 
 import UIKit
 import RealmSwift
+import GoogleMaps
+import CoreLocation
 
-extension UITableViewCell: Reusable {}
+class LocationCell: UITableViewCell, Reusable {
+    
+    var currentIndex = 0
+    
+    override func prepareForReuse() {
+        textLabel?.text = ""
+        detailTextLabel?.text = ""
+    }
+}
 
 protocol HistoryTableViewControllerDelegate: class {
     func dismiss(_ historyViewController: HistoryTableViewController)
@@ -19,6 +29,14 @@ class HistoryTableViewController: UITableViewController {
 
     var coordinateModel: Results<Coordinate>?
     var notificationToken: NotificationToken?
+    let geocoder = GMSGeocoder()
+    
+    static var dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        dateFormatter.calendar = Calendar.current
+        return dateFormatter
+    }()
     
     var delegate: HistoryTableViewControllerDelegate?
     
@@ -32,8 +50,9 @@ class HistoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Histórico"
 
-        tableView.register(UITableViewCell.self)
+        tableView.register(LocationCell.self)
         
         notificationToken = coordinateModel?.addNotificationBlock({ [weak self] (changes) in
             switch changes {
@@ -66,16 +85,37 @@ class HistoryTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(for: indexPath) as UITableViewCell
+        var cell = tableView.dequeueReusableCell(for: indexPath) as LocationCell
         
         // force a change of style
         if cell.detailTextLabel == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: UITableViewCell.identifier)
+            cell = LocationCell(style: .subtitle, reuseIdentifier: LocationCell.identifier)
         }
         
         let coordinate = coordinateModel?[indexPath.row]
-        cell.textLabel?.text = "\(String(describing: coordinate?.date))"
-        cell.detailTextLabel?.text = "\(String(describing: coordinate?.latitude)) - \(String(describing: coordinate?.longitude))"
+        let location = CLLocationCoordinate2D(latitude: coordinate?.latitude ?? 0.0,
+                                              longitude: coordinate?.longitude ?? 0.0)
+
+        cell.currentIndex = indexPath.row
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        geocoder.reverseGeocodeCoordinate(location) { (response, error) in
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            
+            guard error == nil, cell.currentIndex == indexPath.row else {
+                return
+            }
+
+            if let firstAddress = response?.results()?.first {
+                cell.textLabel?.text = firstAddress.addressLine1()
+                var subtitle = ""
+                if let addressLine2 = firstAddress.addressLine2() {
+                    subtitle = addressLine2 + " - "
+                }
+
+                subtitle += HistoryTableViewController.dateFormatter.string(from: coordinate?.date ?? Date())
+                cell.detailTextLabel?.text = subtitle
+            }
+        }
 
         return cell
     }

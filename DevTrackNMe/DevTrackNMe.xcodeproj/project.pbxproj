@@ -14,9 +14,9 @@
 		2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */; };
 		2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */; };
 		2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */; };
+		2B39E8611FD1CDB000F20484 /* Run.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B39E8601FD1CDB000F20484 /* Run.storyboard */; };
 		2B6166F91FCACA510057DF25 /* Bundle+LoadResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */; };
 		2B6166FD1FCACBDB0057DF25 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */; };
-		2B6166FF1FCD77480057DF25 /* RunViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */; };
 		2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */; };
 		2B8948AC1FC8868F0063E3A3 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */; };
 		2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8948AD1FC8868F0063E3A3 /* Main.storyboard */; };
@@ -25,6 +25,8 @@
 		2B8948BF1FC886900063E3A3 /* DevTrackNMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948BE1FC886900063E3A3 /* DevTrackNMeTests.swift */; };
 		2B8948CA1FC886900063E3A3 /* DevTrackNMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */; };
 		2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */; };
+		2BC943571FD1C76100DB9FB0 /* Person.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 2BC943561FD1C76100DB9FB0 /* Person.atlas */; };
+		2BC9435B1FD1C7F400DB9FB0 /* PersonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC9435A1FD1C7F400DB9FB0 /* PersonScene.swift */; };
 		2BE4DBC71FD0EE1A00ACB5BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBC61FD0EE1A00ACB5BE /* HistoryTableViewController.swift */; };
 		2BE4DBC91FD0EF0300ACB5BE /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBC81FD0EF0300ACB5BE /* UITableView+Reusable.swift */; };
 		2BE4DBCB1FD0EF2400ACB5BE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBCA1FD0EF2400ACB5BE /* Reusable.swift */; };
@@ -65,10 +67,10 @@
 		2B0F0D811FC8AEB300FF83A7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 		2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCoordinator.swift; sourceTree = "<group>"; };
+		2B39E8601FD1CDB000F20484 /* Run.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Run.storyboard; sourceTree = "<group>"; };
 		2B6166F71FCACA040057DF25 /* posicoes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posicoes.json; sourceTree = "<group>"; };
 		2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadResource.swift"; sourceTree = "<group>"; };
 		2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
-		2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewModelType.swift; sourceTree = "<group>"; };
 		2B8948A61FC8868F0063E3A3 /* DevTrackNMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevTrackNMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8948A91FC8868F0063E3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTrackNMeUITests.swift; sourceTree = "<group>"; };
 		2B8948CB1FC886900063E3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TargetProperties.swift"; sourceTree = "<group>"; };
+		2BC943561FD1C76100DB9FB0 /* Person.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Person.atlas; sourceTree = "<group>"; };
+		2BC9435A1FD1C7F400DB9FB0 /* PersonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonScene.swift; sourceTree = "<group>"; };
 		2BE4DBC61FD0EE1A00ACB5BE /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		2BE4DBC81FD0EF0300ACB5BE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		2BE4DBCA1FD0EF2400ACB5BE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -150,10 +154,11 @@
 		2B0F0D7A1FC8A8EA00FF83A7 /* Run */ = {
 			isa = PBXGroup;
 			children = (
+				2B39E8601FD1CDB000F20484 /* Run.storyboard */,
 				2B0F0D861FC8B43300FF83A7 /* RunCoordinator.swift */,
 				2B8948AB1FC8868F0063E3A3 /* RunViewController.swift */,
 				2B6166FC1FCACBDB0057DF25 /* Coordinate.swift */,
-				2B6166FE1FCD77480057DF25 /* RunViewModelType.swift */,
+				2BC9435A1FD1C7F400DB9FB0 /* PersonScene.swift */,
 			);
 			path = Run;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 		2BE829C21FD023B700CBEA29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2BC943561FD1C76100DB9FB0 /* Person.atlas */,
 				2B8948B01FC8868F0063E3A3 /* Assets.xcassets */,
 				2B6166F71FCACA040057DF25 /* posicoes.json */,
 				2B8948B51FC8868F0063E3A3 /* Info.plist */,
@@ -393,8 +399,10 @@
 			files = (
 				2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */,
 				2B8948B41FC8868F0063E3A3 /* LaunchScreen.storyboard in Resources */,
+				2B39E8611FD1CDB000F20484 /* Run.storyboard in Resources */,
 				2B8948B11FC8868F0063E3A3 /* Assets.xcassets in Resources */,
 				2BE4DBCE1FD0F79B00ACB5BE /* AddNewLocation.storyboard in Resources */,
+				2BC943571FD1C76100DB9FB0 /* Person.atlas in Resources */,
 				2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,11 +603,11 @@
 				2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */,
 				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,
 				2BE4DBC91FD0EF0300ACB5BE /* UITableView+Reusable.swift in Sources */,
-				2B6166FF1FCD77480057DF25 /* RunViewModelType.swift in Sources */,
 				2BE4DBD01FD0F94000ACB5BE /* AddNewLocationViewController.swift in Sources */,
 				2BE4DBCB1FD0EF2400ACB5BE /* Reusable.swift in Sources */,
 				2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */,
 				2B0F0D801FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift in Sources */,
+				2BC9435B1FD1C7F400DB9FB0 /* PersonScene.swift in Sources */,
 				2B6166FD1FCACBDB0057DF25 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

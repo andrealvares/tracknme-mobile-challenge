@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 import GoogleMaps
 import RealmSwift
 
@@ -19,6 +20,9 @@ protocol RunViewControllerDelegate: class {
 
 class RunViewController: UIViewController {
 
+    @IBOutlet weak var sceneView: SKView!
+    var personScene: PersonScene?
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     
@@ -38,6 +42,17 @@ class RunViewController: UIViewController {
         setupLocationManager()
         setupRealmObserver()
         setupNavigationBarButtons()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let height = sceneView.frame.size.height
+        let width = sceneView.frame.size.width
+        
+        personScene = PersonScene(size: CGSize(width: width, height: height))
+        sceneView.presentScene(personScene)
+        personScene?.walk()
     }
     
     func setupRealmObserver(){
@@ -79,6 +94,8 @@ class RunViewController: UIViewController {
         mapView.isHidden = true
         view.addSubview(mapView)
         
+        view.bringSubview(toFront: sceneView)
+        
         path = GMSMutablePath()
     }
     
@@ -98,13 +115,15 @@ class RunViewController: UIViewController {
         let marker = GMSMarker()
         marker.position = location.coordinate
         marker.map = mapView
+        marker.icon = #imageLiteral(resourceName: "ic_directions_walk")
         
-        geocoder.reverseGeocodeCoordinate(location.coordinate) { (response, error) in
+        geocoder.reverseGeocodeCoordinate(location.coordinate) {  (response, error) in
             guard error == nil else {
                 return
             }
             
             if let firstAddress = response?.results()?.first {
+                
                 marker.title = firstAddress.addressLine1()
                 marker.snippet = firstAddress.addressLine2()
             }

@@ -24,8 +24,7 @@ class RunCoordinator: CoordinatorType {
     }
     
     func start() {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Run", bundle: Bundle.main)
         let runViewController = storyboard.instantiateViewController(withIdentifier: "RunViewController") as! RunViewController
         runViewController.delegate = self
         
