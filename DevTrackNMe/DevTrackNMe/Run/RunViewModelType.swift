@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol RunViewModelType {
     func didGetFirstLocation()
     func didAddNewLocation()
@@ -16,7 +17,7 @@ protocol RunViewModelType {
 struct FirstRunViewModel: RunViewModelType {
     
     func didGetFirstLocation() {
-        
+        // persist locations from json
     }
     
     func didAddNewLocation() {

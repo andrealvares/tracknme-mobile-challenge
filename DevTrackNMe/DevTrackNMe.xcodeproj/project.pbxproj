@@ -25,6 +25,11 @@
 		2B8948BF1FC886900063E3A3 /* DevTrackNMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948BE1FC886900063E3A3 /* DevTrackNMeTests.swift */; };
 		2B8948CA1FC886900063E3A3 /* DevTrackNMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */; };
 		2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */; };
+		2BE4DBC71FD0EE1A00ACB5BE /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBC61FD0EE1A00ACB5BE /* HistoryTableViewController.swift */; };
+		2BE4DBC91FD0EF0300ACB5BE /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBC81FD0EF0300ACB5BE /* UITableView+Reusable.swift */; };
+		2BE4DBCB1FD0EF2400ACB5BE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBCA1FD0EF2400ACB5BE /* Reusable.swift */; };
+		2BE4DBCE1FD0F79B00ACB5BE /* AddNewLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4DBCD1FD0F79B00ACB5BE /* AddNewLocation.storyboard */; };
+		2BE4DBD01FD0F94000ACB5BE /* AddNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */; };
 		2BE829C41FD025E100CBEA29 /* SwiftyJSON+DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */; };
 		2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B6166F71FCACA040057DF25 /* posicoes.json */; };
 		3011FFD84E69B474E2DAC6D7 /* Pods_DevTrackNMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */; };
@@ -77,6 +82,11 @@
 		2B8948C91FC886900063E3A3 /* DevTrackNMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevTrackNMeUITests.swift; sourceTree = "<group>"; };
 		2B8948CB1FC886900063E3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8948D81FC88B9B0063E3A3 /* Bundle+TargetProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+TargetProperties.swift"; sourceTree = "<group>"; };
+		2BE4DBC61FD0EE1A00ACB5BE /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		2BE4DBC81FD0EF0300ACB5BE /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		2BE4DBCA1FD0EF2400ACB5BE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		2BE4DBCD1FD0F79B00ACB5BE /* AddNewLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewLocation.storyboard; sourceTree = "<group>"; };
+		2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLocationViewController.swift; sourceTree = "<group>"; };
 		2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftyJSON+DateValue.swift"; sourceTree = "<group>"; };
 		3F096A7A7A267C4AF2754CAA /* Pods-DevTrackNMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeTests/Pods-DevTrackNMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66C134303247673AE63A906B /* Pods-DevTrackNMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMe/Pods-DevTrackNMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				2B0F0D841FC8B41400FF83A7 /* CoordinatorType.swift */,
+				2BE4DBCA1FD0EF2400ACB5BE /* Reusable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 		2B6166FB1FCACBC00057DF25 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				2BE4DBC61FD0EE1A00ACB5BE /* HistoryTableViewController.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 				2B8948B21FC8868F0063E3A3 /* LaunchScreen.storyboard */,
 				2B0F0D7A1FC8A8EA00FF83A7 /* Run */,
 				2B6166FB1FCACBC00057DF25 /* History */,
+				2BE4DBCC1FD0F73200ACB5BE /* Add new location */,
 				2B0F0D781FC8A8D300FF83A7 /* Onboarding */,
 				2B0F0D831FC8B40400FF83A7 /* Protocols */,
 				2B8948D71FC88A7E0063E3A3 /* Extensions */,
@@ -225,8 +238,18 @@
 				2B0F0D7F1FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift */,
 				2B6166F81FCACA510057DF25 /* Bundle+LoadResource.swift */,
 				2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */,
+				2BE4DBC81FD0EF0300ACB5BE /* UITableView+Reusable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BE4DBCC1FD0F73200ACB5BE /* Add new location */ = {
+			isa = PBXGroup;
+			children = (
+				2BE4DBCD1FD0F79B00ACB5BE /* AddNewLocation.storyboard */,
+				2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */,
+			);
+			path = "Add new location";
 			sourceTree = "<group>";
 		};
 		2BE829C21FD023B700CBEA29 /* Resources */ = {
@@ -368,6 +391,7 @@
 				2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */,
 				2B8948B41FC8868F0063E3A3 /* LaunchScreen.storyboard in Resources */,
 				2B8948B11FC8868F0063E3A3 /* Assets.xcassets in Resources */,
+				2BE4DBCE1FD0F79B00ACB5BE /* AddNewLocation.storyboard in Resources */,
 				2B8948AF1FC8868F0063E3A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,12 +584,16 @@
 				2BE829C41FD025E100CBEA29 /* SwiftyJSON+DateValue.swift in Sources */,
 				2B8948AC1FC8868F0063E3A3 /* RunViewController.swift in Sources */,
 				2B6166F91FCACA510057DF25 /* Bundle+LoadResource.swift in Sources */,
+				2BE4DBC71FD0EE1A00ACB5BE /* HistoryTableViewController.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
 				2B0F0D7E1FC8AB4A00FF83A7 /* FirstRunKeeper.swift in Sources */,
 				2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */,
 				2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */,
 				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,
+				2BE4DBC91FD0EF0300ACB5BE /* UITableView+Reusable.swift in Sources */,
 				2B6166FF1FCD77480057DF25 /* RunViewModelType.swift in Sources */,
+				2BE4DBD01FD0F94000ACB5BE /* AddNewLocationViewController.swift in Sources */,
+				2BE4DBCB1FD0EF2400ACB5BE /* Reusable.swift in Sources */,
 				2B0F0D851FC8B41400FF83A7 /* CoordinatorType.swift in Sources */,
 				2B0F0D801FC8AB9300FF83A7 /* UserDefaults+FirstRunKeeper.swift in Sources */,
 				2B6166FD1FCACBDB0057DF25 /* Coordinate.swift in Sources */,

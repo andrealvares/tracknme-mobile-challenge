@@ -73,10 +73,10 @@ Para total funcionamento, precisamos que você nos dê permissão para acessar a
             </objects>
             <point key="canvasLocation" x="-330" y="133"/>
         </scene>
-        <!--Run View Controller-->
+        <!--DevTrackNMe-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RunViewController" id="BYZ-38-t0r" customClass="RunViewController" customModule="DevTrackNMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunViewController" title="DevTrackNMe" id="BYZ-38-t0r" customClass="RunViewController" customModule="DevTrackNMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +86,7 @@ Para total funcionamento, precisamos que você nos dê permissão para acessar a
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="386" y="133"/>
         </scene>
     </scenes>
 </document>

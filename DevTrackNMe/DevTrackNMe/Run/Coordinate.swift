@@ -8,19 +8,7 @@
 
 import Foundation
 import SwiftyJSON
-
-struct Coordinate {
-    
-    let date: Date
-    let latitude: Double
-    let longitude: Double
-    
-    init(json: JSON) {
-        date = json["dateTime"].dateValue
-        latitude = json["latitude"].doubleValue
-        longitude = json["longitude"].doubleValue
-    }
-}
+import RealmSwift
 
 struct RunService {
     
@@ -28,7 +16,20 @@ struct RunService {
         
         let bundleCoordinates = Bundle.main.loadJSONArray(named: "posicoes")
         return bundleCoordinates.arrayValue.map({ (jsonCoordinate) -> Coordinate in
-            return Coordinate(json: jsonCoordinate)
+            
+            let coordinate = Coordinate()
+            coordinate.date = jsonCoordinate["dateTime"].dateValue
+            coordinate.latitude = jsonCoordinate["latitude"].doubleValue
+            coordinate.longitude = jsonCoordinate["longitude"].doubleValue
+            
+            return coordinate
         })
     }
+}
+
+class Coordinate: Object {
+    
+    @objc dynamic var date = Date()
+    @objc dynamic var latitude = 0.0
+    @objc dynamic var longitude = 0.0
 }
