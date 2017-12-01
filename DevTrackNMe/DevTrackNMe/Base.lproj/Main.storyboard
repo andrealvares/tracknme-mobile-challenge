@@ -24,8 +24,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1G-9T-0mc">
-                                <rect key="frame" x="16" y="211" width="343" height="122"/>
-                                <string key="text">  Seja bem vindo ao app Dev TrackNMe, com ele é possível andar pelo mapa em volta da sua localização atual!
+                                <rect key="frame" x="16" y="211" width="343" height="142.5"/>
+                                <string key="text">  Seja bem vindo ao app Dev TrackNMe, com ele é possível andar pelo mapa e adicionar pontos de interesse (Segurando no mapa ou clicando no botão +)
 Para total funcionamento, precisamos que você nos dê permissão para acessar a localização do seu app</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
