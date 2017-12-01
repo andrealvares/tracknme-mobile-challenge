@@ -32,4 +32,12 @@ class Coordinate: Object {
     @objc dynamic var date = Date()
     @objc dynamic var latitude = 0.0
     @objc dynamic var longitude = 0.0
+    
+    func toJSON() -> JSON {
+        var json = JSON()
+        json["dateTime"].stringValue = JSON.dateFormatter.string(from: date)
+        json["latitude"].doubleValue = latitude
+        json["longitude"].doubleValue = longitude
+        return json
+    }
 }

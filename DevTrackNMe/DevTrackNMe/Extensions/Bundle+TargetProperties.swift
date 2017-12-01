@@ -13,4 +13,8 @@ extension Bundle {
     var googleMapsAPIKey: String {
         return infoDictionary!["GoogleMapsAPIKey"] as! String
     }
+    
+    var apiaryAPIUrl: URL {
+        return URL(string: infoDictionary!["ApiaryAPIUrl"] as! String)!
+    }
 }

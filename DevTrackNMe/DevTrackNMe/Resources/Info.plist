@@ -6,6 +6,8 @@
     <string>O app usa localização para determinar seu posicionamento geográfico</string>
 	<key>GoogleMapsAPIKey</key>
 	<string>AIzaSyD0uPcFa2C1upIc_Oh05TqXh_VjN9LLTc0</string>
+    <key>ApiaryAPIUrl</key>
+    <string>http://private-c2042-devtracknme.apiary-mock.com</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

@@ -13,6 +13,7 @@ import RealmSwift
 protocol RunViewControllerDelegate: class {
     func didGetFirstLocation(_ runViewController: RunViewController, location: CLLocation)
     func didAddNewDestination(_ runViewController: RunViewController)
+    func didAddNewDestination(_ runViewController: RunViewController, with location: CLLocationCoordinate2D)
     func didTapToHistory(_ runViewController: RunViewController)
 }
 
@@ -54,8 +55,14 @@ class RunViewController: UIViewController {
                 
                 break
                 
-            case .update(_, _, let insertions, _):
-                print(insertions)
+            case .update(let coordinates, _, let insertions, _):
+                insertions.forEach({ (index) in
+                    let coordinate = coordinates[index]
+                    self.path.addLatitude(coordinate.latitude, longitude: coordinate.longitude)
+                    self.createMapMarker(for: coordinate)
+                })
+                let polyline = GMSPolyline(path: self.path)
+                polyline.map = self.mapView
                 break
                 
             default: return
@@ -65,6 +72,7 @@ class RunViewController: UIViewController {
     
     func setupMapView(){
         mapView = GMSMapView(frame: view.bounds)
+        mapView.delegate = self
         mapView.settings.myLocationButton = true
         mapView.isMyLocationEnabled = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -142,25 +150,31 @@ extension RunViewController: CLLocationManagerDelegate {
         delegate?.didGetFirstLocation(self, location: location)
     }
     
-//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-//        switch status {
-//        case .restricted:
-//            print("Location access was restricted.")
-//        case .denied:
-//            print("User denied access to location.")
-//            // Display the map using the default location.
-//            mapView.isHidden = false
-//        case .notDetermined:
-//            print("Location status not determined.")
-//        case .authorizedAlways: fallthrough
-//        case .authorizedWhenInUse:
-//            print("Location status is OK.")
-//        }
-//    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+            // Display the map using the default location.
+            mapView.isHidden = false
+        case .notDetermined:
+            print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
+    }
+}
+
+extension RunViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        delegate?.didAddNewDestination(self, with: coordinate)
     }
 }
 

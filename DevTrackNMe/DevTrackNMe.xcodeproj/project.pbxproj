@@ -32,6 +32,7 @@
 		2BE4DBD01FD0F94000ACB5BE /* AddNewLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */; };
 		2BE829C41FD025E100CBEA29 /* SwiftyJSON+DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */; };
 		2BE829C51FD02B6000CBEA29 /* posicoes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B6166F71FCACA040057DF25 /* posicoes.json */; };
+		2BFC165E1FD1100300DD94CE /* LocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC165D1FD1100300DD94CE /* LocationAPI.swift */; };
 		3011FFD84E69B474E2DAC6D7 /* Pods_DevTrackNMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */; };
 		ADA25CAFF58BD2F8AE5DC1CA /* Pods_DevTrackNMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130A5C8071F1416C978F57FA /* Pods_DevTrackNMe.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		2BE4DBCD1FD0F79B00ACB5BE /* AddNewLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewLocation.storyboard; sourceTree = "<group>"; };
 		2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewLocationViewController.swift; sourceTree = "<group>"; };
 		2BE829C31FD025E100CBEA29 /* SwiftyJSON+DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftyJSON+DateValue.swift"; sourceTree = "<group>"; };
+		2BFC165D1FD1100300DD94CE /* LocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAPI.swift; sourceTree = "<group>"; };
 		3F096A7A7A267C4AF2754CAA /* Pods-DevTrackNMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMeTests/Pods-DevTrackNMeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66C134303247673AE63A906B /* Pods-DevTrackNMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevTrackNMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevTrackNMe/Pods-DevTrackNMe.debug.xcconfig"; sourceTree = "<group>"; };
 		6C6C1733F45F211B9782E8D7 /* Pods_DevTrackNMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevTrackNMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,6 +250,7 @@
 			children = (
 				2BE4DBCD1FD0F79B00ACB5BE /* AddNewLocation.storyboard */,
 				2BE4DBCF1FD0F94000ACB5BE /* AddNewLocationViewController.swift */,
+				2BFC165D1FD1100300DD94CE /* LocationAPI.swift */,
 			);
 			path = "Add new location";
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				2BE4DBC71FD0EE1A00ACB5BE /* HistoryTableViewController.swift in Sources */,
 				2B8948AA1FC8868F0063E3A3 /* AppDelegate.swift in Sources */,
 				2B0F0D7E1FC8AB4A00FF83A7 /* FirstRunKeeper.swift in Sources */,
+				2BFC165E1FD1100300DD94CE /* LocationAPI.swift in Sources */,
 				2B0F0D871FC8B43300FF83A7 /* RunCoordinator.swift in Sources */,
 				2B0F0D821FC8AEB300FF83A7 /* OnboardingViewController.swift in Sources */,
 				2B8948D91FC88B9B0063E3A3 /* Bundle+TargetProperties.swift in Sources */,

@@ -38,13 +38,31 @@ class RunCoordinator: CoordinatorType {
 }
 
 extension RunCoordinator: RunViewControllerDelegate {
-    func didAddNewDestination(_ runViewController: RunViewController) {
+    func didAddNewDestination(_ runViewController: RunViewController, with location: CLLocationCoordinate2D) {
+        let storyboard = UIStoryboard(name: "AddNewLocation", bundle: Bundle.main)
+        let addNewLocationViewController = storyboard.instantiateViewController(withIdentifier: "AddNewLocationViewController") as! AddNewLocationViewController
+        addNewLocationViewController.delegate = self
+        addNewLocationViewController.modalPresentationStyle = .overCurrentContext
+        addNewLocationViewController.modalTransitionStyle = .crossDissolve
+        addNewLocationViewController.currentLatitude = location.latitude
+        addNewLocationViewController.currentLongitude = location.longitude
         
+        navigationController.topViewController?.present(addNewLocationViewController, animated: true, completion: nil)
+    }
+    
+    func didAddNewDestination(_ runViewController: RunViewController) {
+        let storyboard = UIStoryboard(name: "AddNewLocation", bundle: Bundle.main)
+        let addNewLocationViewController = storyboard.instantiateViewController(withIdentifier: "AddNewLocationViewController") as! AddNewLocationViewController
+        addNewLocationViewController.delegate = self
+        addNewLocationViewController.modalPresentationStyle = .overCurrentContext
+        addNewLocationViewController.modalTransitionStyle = .crossDissolve
+        
+        navigationController.topViewController?.present(addNewLocationViewController, animated: true, completion: nil)
     }
     
     func didTapToHistory(_ runViewController: RunViewController) {
         let historyViewController = HistoryTableViewController()
-        historyViewController.coordinateModel = realm.objects(Coordinate.self)
+        historyViewController.coordinateModel = realm.objects(Coordinate.self).sorted(byKeyPath: "date", ascending: false)
         historyViewController.delegate = self
         navigationController.pushViewController(historyViewController, animated: true)
     }
@@ -73,6 +91,22 @@ extension RunCoordinator: HistoryTableViewControllerDelegate {
     
     func dismiss(_ historyViewController: HistoryTableViewController) {
         historyViewController.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension RunCoordinator: AddNewLocationViewControllerDelegate {
+    
+    func cancel(_ addNewLocationViewController: AddNewLocationViewController) {
+        addNewLocationViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func addLocation(_ addNewLocationViewController: AddNewLocationViewController, newCoordinate: Coordinate) {
+
+        try! realm.write {
+            realm.add(newCoordinate)
+        }
+        
+        cancel(addNewLocationViewController)
     }
 }
 
