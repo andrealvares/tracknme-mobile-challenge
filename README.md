@@ -20,5 +20,4 @@ Não implementado:
 Exibição do personagem animado em 3D ao se deslocar entre posições.
 
 Desenvolvido por:
-
 [Igor Maldonado Floôr](https://www.linkedin.com/in/igormfloor/)
