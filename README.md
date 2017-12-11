@@ -9,24 +9,30 @@ O desafio consiste em criar um app com as seguintes características:
 
 # Task 1 - Desenhar e movimentar personagem no mapa
 
-Implementar um app cuja tela principal apresenta um mapa (google maps) e uma personagem humanoide posicionado nas coordenadas GPS do telefone. [Link para a personagem](https://github.com/andrealvares/tracknme-mobile-challenge/blob/master/assets/sprites.png).
-
-A personagem deve passar impressão de tridimensionalidade e deve andar nas posições das coordenadas providas nesse [arquivo de response JSON](https://github.com/andrealvares/tracknme-mobile-challenge/blob/master/assets/posicoes.json). Após a personagem concluir todo o trajeto do arquivo de response, o usuário deve ser capaz de direcionar a personagem para um novo ponto. Esse novo ponto pode ser um click no mapa qualquer outra interface de entrada de dados que julgar válida. 
-
-A nova posição deve ser salva localmente (usando o Realm) e sua aplicação deve realizar um `POST` com os seguintes atributos:
+- Implementar um app cuja tela principal apresenta um mapa (Android google maps/ IOS mapkit) 
+- Consumimir de uma API Rest uma lista de posições (ex: [arquivo de response JSON]) (Aconselhamos que use o [Apiary](https://apiary.io) como API nessa etapa ou outra semelhante).
+- Essa resposta da API deve ser salva em banco local (Android Realm / IOS CoreData) para futuras consultas sem a necessidade de nova consulta na API Rest
+- O marcador no mapa deve se deslocar por essas posições formando um trajeto
+- Após o término do trajeto das posições recebidas, deve ser possível tocar no mapa e ir para uma nova posição
+- A nova posição deve ser salva localmente (usando o Realm/CoreData) e sua aplicação deve realizar um `POST` com os seguintes atributos:
 
 ``` json
 {
-    	"dateTime": "2017-10-12T21:34:15",
+    "dateTime": "2017-10-12T21:34:15",
 	"latitude": -23.962676666666667,
 	"longitude": -46.3884785
 }
 ```
-Aconselhamos que use o [Apiary](https://apiary.io) como API nessa etapa.
+
+Diferencial (Não obrigatório):
+- Utilizar um marcador personalizado de um personagem humanoide [Link para a personagem](https://github.com/andrealvares/tracknme-mobile-challenge/blob/master/assets/sprites.png).
+
 
 # Task 2 - Listar o histórico do trajeto
 
-Mostrar numa tela, todos o histórico do trajeto feito pela personagem, tantos o trajeto provenientes do arquivo JSON como os novos movimentos adicionados pelo usuário, por ordem decrescente de data/hora. A listagem deve conter os atributos: dateTime e Endereço legível ao usuário (por ex.: Rua Tal e tal, São Paulo - SP).
+Em uma outra tela, mostrar no mapa todo o trajeto feito pela personagem, tantos o trajeto provenientes do arquivo JSON como os novos movimentos adicionados pelo usuário, por ordem decrescente de data/hora. 
+
+Ao tocar em um ponto do trajeto, mostrar as informações de dateTime e endereço legível ao usuário (por ex.: 01/12/2017 - Rua Tal e tal, São Paulo - SP) referentes aquele ponto. Essa informação pode ser mostrada em um InfoWindow ou Modal.
 
 O aplicativo deve permitir o uso offline. Nesse caso o usuário poderá visualizar os dados existentes na base local até o momento que estava com conectividade.
 
