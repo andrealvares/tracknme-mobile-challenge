@@ -32,7 +32,7 @@ Diferencial (Não obrigatório):
 
 Em uma nova tela chamada histórico, mostrar no mapa todo o trajeto feito pela personagem, tanto o trajeto proveniente do arquivo JSON como os novos movimentos adicionados pelo usuário por ordem decrescente de data/hora. 
 
-Ao tocar em um ponto do trajeto, mostrar as informações de dateTime e endereço legível ao usuário (por ex.: 01/12/2017 - Rua Tal e tal, São Paulo - SP) referentes aquele ponto. Essa informação pode ser mostrada em um InfoWindow ou Modal.
+Ao tocar em um ponto do trajeto, mostrar as informações de dateTime e endereço legível ao usuário (por ex.: 01/12/2017 - Rua Tal e tal, São Paulo - SP) referentes aquele ponto. Essa informação pode ser mostrada em um InfoWindow/WindowCallOut.
 
 O aplicativo deve permitir o uso offline. Nesse caso o usuário poderá visualizar os dados existentes na base local até o momento que estava com conectividade.
 
