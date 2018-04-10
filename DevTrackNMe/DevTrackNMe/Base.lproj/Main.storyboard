@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ye1-Sh-FIU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="jQF-HF-nq0">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="ye1-Sh-FIU" customClass="OnboardingViewController" customModule="DevTrackNMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mkY-KG-ijd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DevTrackNMe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NM-If-8qP">
+                                <rect key="frame" x="87" y="52" width="202" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1G-9T-0mc">
+                                <rect key="frame" x="16" y="211" width="343" height="142.5"/>
+                                <string key="text">  Seja bem vindo ao app Dev TrackNMe, com ele é possível andar pelo mapa e adicionar pontos de interesse (Segurando no mapa ou clicando no botão +)
+Para total funcionamento, precisamos que você nos dê permissão para acessar a localização do seu app</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQ5-M0-QAa">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.91202566964285714" green="0.142578125" blue="0.19707031250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LEW-CJ-eYp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Habilitar Localização"/>
+                                <connections>
+                                    <action selector="didTapOnEnableLocation:" destination="ye1-Sh-FIU" eventType="touchUpInside" id="Ydl-Kw-DMi"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YWk-zA-kK6">
+                                <rect key="frame" x="178" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQ5-M0-QAa" firstAttribute="leading" secondItem="mIA-0V-nZi" secondAttribute="leading" id="3Zd-IY-1ab"/>
+                            <constraint firstItem="N1G-9T-0mc" firstAttribute="top" secondItem="7NM-If-8qP" secondAttribute="bottom" constant="120" id="4SL-rX-vCp"/>
+                            <constraint firstItem="N1G-9T-0mc" firstAttribute="leading" secondItem="mIA-0V-nZi" secondAttribute="leading" constant="16" id="8l1-Nm-FUk"/>
+                            <constraint firstItem="YWk-zA-kK6" firstAttribute="centerX" secondItem="mIA-0V-nZi" secondAttribute="centerX" id="BvA-I2-4Im"/>
+                            <constraint firstItem="eQ5-M0-QAa" firstAttribute="bottom" secondItem="mIA-0V-nZi" secondAttribute="bottom" id="I9N-HQ-Fsu"/>
+                            <constraint firstItem="YWk-zA-kK6" firstAttribute="centerY" secondItem="mIA-0V-nZi" secondAttribute="centerY" id="RPF-f4-htO"/>
+                            <constraint firstItem="mIA-0V-nZi" firstAttribute="trailing" secondItem="N1G-9T-0mc" secondAttribute="trailing" constant="16" id="RtD-ab-OBi"/>
+                            <constraint firstItem="7NM-If-8qP" firstAttribute="centerX" secondItem="mIA-0V-nZi" secondAttribute="centerX" id="VE7-Nm-tI8"/>
+                            <constraint firstItem="7NM-If-8qP" firstAttribute="top" secondItem="mIA-0V-nZi" secondAttribute="top" constant="32" id="WMk-pN-Bb1"/>
+                            <constraint firstItem="mIA-0V-nZi" firstAttribute="trailing" secondItem="eQ5-M0-QAa" secondAttribute="trailing" id="qNj-TU-Qbb"/>
+                            <constraint firstItem="N1G-9T-0mc" firstAttribute="centerX" secondItem="mIA-0V-nZi" secondAttribute="centerX" id="xzC-xT-9o3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mIA-0V-nZi"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="YWk-zA-kK6" id="Ql6-gO-w2s"/>
+                        <outlet property="enableLocationButton" destination="eQ5-M0-QAa" id="hM6-yD-yGj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaw-vP-v2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="133"/>
+        </scene>
+    </scenes>
+</document>
