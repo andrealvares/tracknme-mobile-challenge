@@ -10,7 +10,7 @@ O desafio consiste em criar um app com as seguintes características:
 # Task 1 - Desenhar e movimentar marcador no mapa
 
 - Implementar um app cuja tela principal apresenta um mapa (Android google maps/ IOS mapkit) 
-- Consumir de uma API Rest uma lista de posições (ex: [arquivo de response JSON](https://github.com/andrealvares/tracknme-mobile-challenge/blob/master/assets/posicoes.json)) (Aconselhamos que use o [Apiary](https://apiary.io) como API nessa etapa ou outra semelhante).
+- Consumir de uma API Rest uma lista de posições (ex: [arquivo de response JSON](https://github.com/andrealvares/tracknme-mobile-challenge/blob/master/assets/posicoes.json)) (Você deve implementar um endpoint REST e disponibiliza-lo remotamente para que seja consumido pelo app).
 - A resposta da API deve ser salva em banco local (Android Realm / IOS CoreData) para futuras consultas sem a necessidade de nova consulta na API Rest
 - O marcador no mapa deve se deslocar por essas posições formando um trajeto
 - Após o término do trajeto das posições recebidas, deve ser possível tocar no mapa e ir para uma nova posição
